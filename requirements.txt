@@ -1,0 +1,17 @@
+numpy
+pandas
+scipy
+tqdm
+pyyaml
+matplotlib
+joblib
+trimesh
+torch
+torchvision
+torchaudio
+smplx
+ipykernel
+jupyter
+pytest
+black
+isort

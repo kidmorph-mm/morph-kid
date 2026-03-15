@@ -1,0 +1,30 @@
+============================================================
+AGORA DATASET ANALYSIS SUMMARY
+============================================================
+
+Kid samples  : 236
+Adult samples: 2962
+  Male  : 1383
+  Female: 1579
+
+─── KID ───────────────────────────
+Height: mean=1.262m, std=0.223m, range=[0.510,1.683]
+β[0]:   mean=-0.000, std=0.618
+β[10] (kidness): mean=0.296, std=0.134, range=[-0.032,0.623]
+Shoulder/Hip ratio: mean=2.692, std=0.324
+
+─── ADULT ───────────────────────────
+Height: mean=1.638m, std=0.224m, range=[0.299,2.274]
+β[0]:   mean=0.042, std=0.934
+Shoulder/Hip ratio: mean=2.453, std=0.540
+
+─── CONVERSION RECOMMENDATION ───────────────────────
+Mean height ratio (kid/adult): 0.7709
+Mean β[0] diff (kid-adult):    -0.0424
+Correlation β[0]↔height (kid): r=0.1628
+Kidness factor β[10]: mean=0.2963, std=0.1343
+
+Best approach: Beta Regression (Method D)
+  Input:  adult β[0:10] + target height + gender
+  Output: kid β[0:11] (incl. β[10] kidness)
+  Train:  AGORA kid GT (this dataset)
